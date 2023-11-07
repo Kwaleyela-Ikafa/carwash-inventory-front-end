@@ -6,11 +6,14 @@ interface CarWashData {
   contact: string;
   service: string;
   vehicle: string;
+  registration: string;
   cleaner: string;
   share: string;
+  share_percentage: number;
   price: number;
   p_m: string;
   cashier: string;
+  comments: string;
   id: number; // Unique identifier for each entry
 }
 
@@ -87,11 +90,14 @@ const CarWashManagement: React.FC = () => {
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Contact</th>
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Service</th>
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Vehicle</th>
+              <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">REG</th>
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Cleaner</th>
-              <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Share</th>
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Price</th>
+              <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Share %</th>
+              <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Share</th>
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">P/M</th>
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Cashier</th>
+              <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Comments</th>
               <th className="px-4 py-2 bg-blue-900 text-white font-bold uppercase text-sm border-b border-gray-400">Actions</th>
             </tr>
           </thead>
@@ -111,19 +117,28 @@ const CarWashManagement: React.FC = () => {
                   {data.vehicle}
                 </td>
                 <td className="border px-4 py-2">
+                  {data.registration}
+                </td>
+                <td className="border px-4 py-2">
                   {data.cleaner}
                 </td>
                 <td className="border px-4 py-2">
-                  {data.share}
+                  {data.price}
                 </td>
                 <td className="border px-4 py-2">
-                  {data.price}
+                  {data.share_percentage}
+                </td>
+                <td className="border px-4 py-2">
+                  {data.share}
                 </td>
                 <td className="border px-4 py-2">
                   {data.p_m}
                 </td>
                 <td className="border px-4 py-2">
                   {data.cashier}
+                </td>
+                <td className="border px-4 py-2">
+                  {data.comments}
                 </td>
                 <td className="border px-4 py-2">
                   <button 
