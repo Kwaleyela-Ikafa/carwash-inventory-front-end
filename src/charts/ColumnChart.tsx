@@ -61,7 +61,7 @@ const ColumnChart: React.FC = () => {
     dataLabels: {
       enabled: true,
       formatter: function (val: number) {
-        return `$${val.toFixed(2)}`;
+        return `K${val.toFixed(2)}`;
       },
       offsetY: -20,
       style: {
